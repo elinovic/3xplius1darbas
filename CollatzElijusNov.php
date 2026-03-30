@@ -1,21 +1,20 @@
 <?php
+
+include_once "collatz3xplius1.php";
+
+$obj=new collatz3xplius1();
+
+//paprastas 1 skaiciaus collatz
 $sk = 99;
-$kiek = 1;
-print("Pradinis skaicius: $sk");
-print("<br>");
-while ($sk != 1){
-	if($sk % 2 == 0){
-		$sk = $sk/2;
-	print($sk);
-	print("<br>");
-	$kiek++;}
-	
-	else {$sk=$sk*3+1;
-	print($sk);
-	print("<br>");
-	$kiek++;}
-}
-print("<br>");
-print("Iteraciju skaicius: $kiek");
-	
+$obj-> skaiciuokcollatz($sk);
+//$obj-> get_ats();
+
+//intervalo collatz su statistika
+$p = 129;
+$g = 45487;
+$obj-> set_pradzia($p);
+$obj-> set_galas($g);
+$obj-> intervalocollatz();
+$obj-> rodykstatistika();
+
 ?>
