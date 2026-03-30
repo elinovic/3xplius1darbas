@@ -37,7 +37,6 @@
     for($i=$this->intprad; $i<=$this->intgal; $i++){
 	 $iter=1;
 	 $sk=$i;
-	 $pradsk=$i;
 	 while ($sk != 1){
 	if($sk % 2 == 0){
 		$sk = $sk/2;
